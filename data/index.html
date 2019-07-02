@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='stylesheet' href="http://server.home/css/bootstrap.min.css" type='text/css' media='all'>
+    <script src="http://server.home/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://server.home/bower_components/chartist/dist/chartist.min.css">
+    <meta charset="UTF-8">
+    <title>Kettle</title>
+</head>
+<body>
+    <div class="jumbotron text-center" style="color: darkorange">
+        <h1>Это демо странички</h1>
+        <p>Нужна для тестирования ESP8266 и WEB. Использованы <code>Websockets</code>, <code>Boostrap</code></p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h3>Kettle</h3>
+                <p>Кнопочки управления LED</p>
+                <div class="btn-group">
+                    <button type="button" id="led_on" class="btn btn-success">ON</button>
+                    <button type="button" id="led_off" class="btn btn-danger">OFF</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3>ESP sensor data</h3>
+                <p>Вот данные с датчиков/платы</p>
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Sensor</th>
+                        <th>Value</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>C02 sensor</td>
+                        <td id="free_mem">242</td>
+                    </tr>
+                    <tr>
+                        <td>Power voltage</td>
+                        <td>5.1</td>
+                    </tr>
+                    <tr>
+                        <td>DHT22 Temperature</td>
+                        <td class="btn-danger">No data</td>
+                    </tr>
+                    <tr>
+                        <td>DHT22 Humidity</td>
+                        <td class="btn-danger">No data</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-5">
+                <h3>Chart</h3>
+                <p>Folder size</p>
+                <div class="ct-chart"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/ws.js"></script>
+    <script src="http://server.home/bower_components/chartist/dist/chartist.min.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>
