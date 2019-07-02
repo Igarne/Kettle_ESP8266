@@ -17,7 +17,7 @@ String socket_data;
 const char* ssid = "Home";
 const char* password = "9876543210";
 
-#define dhtPin 12
+#define dhtPin 2
 
 ESP8266WebServer server(80);
 WebSocketsServer webSocket = WebSocketsServer(81);
